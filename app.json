@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "pizzaria",
+    "slug": "pizzaria",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
