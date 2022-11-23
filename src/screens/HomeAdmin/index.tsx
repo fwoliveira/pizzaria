@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from '../../components/Button';
+import { PizzaCard } from '../../components/PizzaCard';
 import { SearchBar } from '../../components/SearchBar';
 import {Container,
         Header,
@@ -6,10 +8,13 @@ import {Container,
         Title,
         Icon,
         AdmInfo,
-        SeachBarCard
+        SeachBarCard,
+        List,
+        Form,
 
 
 } from './styles'
+import { data } from "../../utils/Pizzas";
 
 export default function HomeAdmin() {
   return (
@@ -24,6 +29,14 @@ export default function HomeAdmin() {
      <SeachBarCard>
     <SearchBar/>
     </SeachBarCard>
+ 
+    <List
+        data={data}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <PizzaCard data={item} />}
+      /> 
+     
+      <Button title='Cadastrar pizza'/>
     </Container>
   );
 }

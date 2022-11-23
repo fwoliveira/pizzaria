@@ -1,26 +1,44 @@
-import React from 'react';
+import React from "react";
 
-import { 
-    Container,
-    Header,
-    Title,
-    Description,
-    
-     
-} from './styles';
+import {
+  Container,
+  AreaImage,
+  Image,
+  AreaDescription,
+  TitleArea,
+  Title,
+  Icon,
+  Description,
+  AreaIconButton,
+  Separator
+} from "./styles";
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+}
+interface CardProps {
+  data: Props
+}
 
-
-
-export function HighlightCard() {
+export function PizzaCard({data} : CardProps) {
   return (
-      <Container >
-        <Image source={require('../../assets/happy.png')} />
-          <Header>
-              <Title>Margherita</Title>
-              <Description>Mussarela, manjericão fresco,
-               parmesão e tomate.
-              </Description>
-          </Header>
-      </Container>
-  )
+    <Container>
+      <AreaImage>
+        <Image source={data.image} />
+      </AreaImage>
+      <AreaDescription>
+        <TitleArea>
+          <Title>{data.title}</Title>
+          <AreaIconButton>
+            <Icon name="right" />
+          </AreaIconButton>
+        </TitleArea>
+        <Description>
+          {data.description}
+        </Description>
+        <Separator></Separator>
+      </AreaDescription>
+    </Container>
+  );
 }
