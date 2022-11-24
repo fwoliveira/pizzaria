@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeAdmin from './src/screens/HomeAdmin';
+import { SignIn } from './src/screens/SingIn';
 import * as SplashScreen from 'expo-splash-screen'
 import {ThemeProvider} from 'styled-components';
 import theme from './src/global/styles/theme';
@@ -15,6 +16,7 @@ import{
 
 
 
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     DMSerifDisplay_400Regular,
@@ -25,7 +27,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-     <HomeAdmin/>
+     {/* <HomeAdmin/> */}
+     <SignIn/>
     </ThemeProvider>
   );
 }

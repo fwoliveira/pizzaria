@@ -56,12 +56,19 @@ export const List = styled.FlatList.attrs({
 })`
     /* flex:1;
     padding: 0 24px; */
-
 `;
 
 export const Form = styled.View`
     flex:1;
     justify-content: space-between;
     width: 100%;
-    padding: 24px;
+    padding: 65px 24px 8px  24px ;
+
 `;
+
+export const Line = styled.View`
+  width: 100%;
+  height: 1px;
+  margin: 14px 0;
+  background-color: ${({ theme }) => theme.COLORS.SHAPE};
+`

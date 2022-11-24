@@ -2,15 +2,15 @@ import React from "react";
 
 import {
   Container,
-  AreaImage,
   Image,
-  AreaDescription,
-  TitleArea,
+  Header,
+  TitleInfo,
   Title,
-  Icon,
+  ButtonIcon,
   Description,
-  AreaIconButton,
-  Separator
+  Line,
+
+  
 } from "./styles";
 interface Props {
   image: string;
@@ -24,21 +24,17 @@ interface CardProps {
 export function PizzaCard({data} : CardProps) {
   return (
     <Container>
-      <AreaImage>
         <Image source={data.image} />
-      </AreaImage>
-      <AreaDescription>
-        <TitleArea>
+      <Header>
+        <TitleInfo>
           <Title>{data.title}</Title>
-          <AreaIconButton>
-            <Icon name="right" />
-          </AreaIconButton>
-        </TitleArea>
+            <ButtonIcon name="right" />
+        </TitleInfo>
         <Description>
           {data.description}
         </Description>
-        <Separator></Separator>
-      </AreaDescription>
+        <Line/>
+      </Header>
     </Container>
   );
 }

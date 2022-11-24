@@ -11,6 +11,7 @@ import {Container,
         SeachBarCard,
         List,
         Form,
+        Line
 
 
 } from './styles'
@@ -29,14 +30,16 @@ export default function HomeAdmin() {
      <SeachBarCard>
     <SearchBar/>
     </SeachBarCard>
- 
+    
+    <Form>
+      <Line/>
     <List
         data={data}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <PizzaCard data={item} />}
       /> 
-     
       <Button title='Cadastrar pizza'/>
+      </Form>
     </Container>
   );
 }

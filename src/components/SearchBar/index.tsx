@@ -1,16 +1,18 @@
 import React from 'react';
-import { Button } from './Button';
-import { Input } from './Input';
+
 import { 
   Container,
-
+  Input,
+  Form,
+  Button,
+  Icon
 } from './styles';
 
 export function SearchBar(){
   return (
     <Container>
-     <Input/> 
-    <Button/>
+    <Input/>
+    <Button><Icon name='search'/></Button>
     </Container>
   )
 }
