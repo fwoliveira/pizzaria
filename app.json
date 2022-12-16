@@ -5,6 +5,19 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#B83341"
+      },
+      "package": "com.pizzaria"
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#B83341",
+      "resizeMode": "cover"
+    }
+
   }
 }

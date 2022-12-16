@@ -17,7 +17,7 @@ import {Container,
 } from './styles'
 import { data } from "../../utils/Pizzas";
 
-export default function HomeAdmin() {
+export function HomeAdmin() {
   return (
     <Container>
      <Header> 

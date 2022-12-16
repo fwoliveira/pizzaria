@@ -12,6 +12,7 @@ import{
 import{
   DMSans_400Regular
 } from '@expo-google-fonts/dm-sans'
+import { Routes } from './src/routes';
 
 
 
@@ -27,8 +28,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-     {/* <HomeAdmin/> */}
-     <SignIn/>
+   
+     <Routes/>
     </ThemeProvider>
   );
 }
